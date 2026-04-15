@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>메일 보내기</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fcefee, #e0f7fa);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #ffffffcc;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 350px;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            text-align: center;
+            color: #6a5acd;
+        }
+
+        input, textarea {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background: #f3f3f3;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #a5d8ff;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #74c0fc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>📧 메일 보내기</h2>
+
+    <form action="/send" method="POST">
+        <input type="email" name="email" placeholder="받는 사람 이메일" required>
+        <input type="text" name="subject" placeholder="제목" required>
+        <textarea name="message" placeholder="내용 입력..." required></textarea>
+        <button type="submit">메일 보내기</button>
+    </form>
+</div>
+
+</body>
+</html>
